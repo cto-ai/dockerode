@@ -1,0 +1,26 @@
+name: "Re-publish as scoped module"
+on:
+  push:
+    tags:
+      - v*
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check scope
+        run: |
+          if ! grep -q '@cto.ai/dockerode' package.json; then
+            echo '@cto.ai/dockerode not found in package.json file'
+            exit 1
+          fi
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies
+        run: npm install
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PUBLISH_TOKEN }}
