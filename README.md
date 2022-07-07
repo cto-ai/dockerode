@@ -1,3 +1,5 @@
+**NOTE**: This is an [apocas/dockerode](https://github.com/apocas/dockerode) unofficial fork. Please refer to that node package home page for questions or issues.
+
 # dockerode [![Build Status](https://travis-ci.org/apocas/dockerode.svg?branch=master)](https://travis-ci.org/apocas/dockerode)
 
 Not another Node.js Docker Remote API module.

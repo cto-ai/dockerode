@@ -1,14 +1,11 @@
 {
-  "name": "dockerode",
+  "name": "@cto.ai/dockerode",
   "description": "Docker Remote API module.",
   "version": "3.2.1",
   "author": "Pedro Dias <petermdias@gmail.com>",
-  "maintainers": [
-    "apocas <petermdias@gmail.com>"
-  ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/apocas/dockerode.git"
+    "url": "https://github.com/cto-ai/dockerode.git"
   },
   "keywords": [
     "docker",
@@ -32,5 +29,8 @@
   "license": "Apache-2.0",
   "engines": {
     "node": ">= 8.0"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
